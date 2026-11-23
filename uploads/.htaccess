@@ -1,0 +1,8 @@
+# Block direct access to PHP files in includes/ and uploads/
+<FilesMatch "\.php$">
+    Require all denied
+</FilesMatch>
+# Allow only images in uploads/
+<FilesMatch "\.(jpg|jpeg|png|webp|gif)$">
+    Require all granted
+</FilesMatch>
